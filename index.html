@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Метатег для адаптивного масштабирования -->
     <title>Fitness App</title>
     <style>
-     .center-image {
+    body {
+        margin: 0; /* Убираем отступы */
+        overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+    }
+
+    .center-image {
         text-align: center;
     }
 
@@ -77,7 +82,6 @@
         background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
         z-index: 1; /* Поместить псевдоэлемент под текстом */
     }
-
     </style>
 </head>
 <body>
@@ -91,15 +95,15 @@
                 <div class="line"></div> <!-- Линия -->
                 <div class="date">16.08.2024</div> <!-- Дата -->
             </div>
+        </div>
     </section>
 
-  <!-- Раздел "О нас" -->
-<section id="about" >
-    <div class="center-image">
-        <img src="13f8cecb-c8f2-494c-b712-0d2199802deb.jpg" alt="About Image">
-    </div>
-    
-</section>
+    <!-- Раздел "О нас" -->
+    <section id="about" >
+        <div class="center-image">
+            <img src="13f8cecb-c8f2-494c-b712-0d2199802deb.jpg" alt="About Image">
+        </div>
+    </section>
 
 </body>
 </html>
