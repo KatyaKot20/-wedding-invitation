@@ -1,85 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness App</title>
-    <style>
-        /* Общие стили */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        .center-image {
-            text-align: center;
-        }
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
 
-        .center-image img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        .image-container {
-            position: relative;
-            display: inline-block;
-        }
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
 
-        .bottom-left-text {
-            position: absolute;
-            left: 10px;
-            bottom: 10px;
-            color: #EADCC2;
-            font-family: "Book Antiqua", serif;
-            font-style: italic;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
 
-        .bottom-right-text {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            color: #EADCC2;
-            font-family: "Book Antiqua", serif;
-            font-style: italic;
-        }
+main {
+    padding: 20px;
+}
 
-        /* Дополнительные стили для мобильных устройств */
-        @media screen and (max-width: 414px) {
-            /* iPhone 13 */
-            .bottom-left-text, .bottom-right-text {
-                font-size: 16px;
-            }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
 
-            .ampersand {
-                font-size: 30px;
-            }
+.center-image {
+    text-align: center;
+}
 
-            .date {
-                font-size: 16px;
-            }
+.center-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
 
-            .line {
-                bottom: 15px;
-                width: 60%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <section id="home">
-        <div class="center-image">
-            <div class="image-container">
-                <img src="IMG_7487 (1).jpg" alt="Fitness Image">
-                <div class="bottom-left-text">Максим</div>
-                <div class="ampersand">&amp;</div> <!-- Знак амперсанда -->
-                <div class="bottom-right-text">Ангелина</div>
-                <div class="line"></div> <!-- Линия -->
-                <div class="date">16.08.2024</div> <!-- Дата -->
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.bottom-left-text {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #EADCC2;
+    font-family: "Book Antiqua", serif;
+    font-style: italic;
+}
+
+.bottom-right-text {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #EADCC2;
+    font-family: "Book Antiqua", serif;
+    font-style: italic;
+}
+
+
+#about {
+    background-color: white;
+    text-align: center; /* Центрируем содержимое секции */
+}
+
+#about img {
+    height: 50vh; /* Устанавливаем высоту изображения в 50% высоты видимой области страницы */
+    width: 100vh; /* Автоматически подстраиваем ширину под высоту */
+    max-width: 100%; /* Устанавливаем максимальную ширину изображения на случай, если оно больше родительского контейнера */
+    display: block; /* Устанавливаем изображение как блочный элемент для правильного отображения */
+    margin: 0 auto; /* Центрируем изображение по горизонтали */
+}
+
+

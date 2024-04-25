@@ -5,67 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness App</title>
     <style>
-        /* Общие стили */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+     .center-image {
+    text-align: center;
+}
 
-        .center-image {
-            text-align: center;
-        }
+.center-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Определите максимальную высоту, подходящую для мобильных устройств */
+}
 
-        .center-image img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
+.image-container {
+    position: relative;
+    display: inline-block;
+}
 
-        .image-container {
-            position: relative;
-            display: inline-block;
-        }
+.bottom-left-text, .bottom-right-text, .bottom-center-text, .ampersand, .date {
+    position: absolute;
+    color: #EADCC2;
+    font-family: "Book Antiqua", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    margin: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
-        .bottom-left-text {
-            position: absolute;
-            left: 10px;
-            bottom: 10px;
-            color: #EADCC2;
-            font-family: "Book Antiqua", serif;
-            font-style: italic;
-        }
+.bottom-left-text {
+    bottom: 73px; /* Изменили значение bottom */
+    left: 18px;
+}
 
-        .bottom-right-text {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            color: #EADCC2;
-            font-family: "Book Antiqua", serif;
-            font-style: italic;
-        }
+.bottom-right-text {
+    bottom: 35px;
+    right: 10px; /* Изменили значение right */
+}
 
-        /* Дополнительные стили для мобильных устройств */
-        @media screen and (max-width: 414px) {
-            /* iPhone 13 */
-            .bottom-left-text, .bottom-right-text {
-                font-size: 16px;
-            }
+.ampersand {
+    bottom: 35px; /* Ниже текста Максим и перед Ангелина */
+    left: 40%; /* Помещаем текст в центре */
+    transform: translateX(-50%); /* Сдвигаем текст влево на половину его ширины, чтобы он был по центру */
+    color: black; /* Черный цвет */
+    font-size: 40px;
+    font-weight: normal; /* Убираем жирность */
+}
 
-            .ampersand {
-                font-size: 30px;
-            }
+.date {
+    bottom: 1px; /* Ниже текста Максим и перед Ангелина */
+    right: 50%; /* Помещаем текст в центре */
+    transform: translateX(50%); /* Сдвигаем текст вправо на половину его ширины, чтобы он был по центру */
+}
 
-            .date {
-                font-size: 16px;
-            }
+.bottom-center-text::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Под текстом даты */
+    left: 0;
+    width: 100%;
+    height: 0.5px; /* Высота линии */
+    background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
+    z-index: -1; /* Поместить псевдоэлемент под текстом */
+}
 
-            .line {
-                bottom: 15px;
-                width: 60%;
-            }
-        }
+.line {
+    position: absolute;
+    bottom: 10px; /* Под текстом даты */
+    left: 20%; /* Линия начинается с центра */
+    width: 50%;
+    height: 0.5px; /* Высота линии */
+    background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
+    z-index: 1; /* Поместить псевдоэлемент под текстом */
+}
+
     </style>
 </head>
 <body>
@@ -79,7 +91,17 @@
                 <div class="line"></div> <!-- Линия -->
                 <div class="date">16.08.2024</div> <!-- Дата -->
             </div>
-        </div>
     </section>
+
+  <!-- Раздел "О нас" -->
+<section id="about" >
+    <div class="center-image">
+        <img src="e496e2e4-54b7-409b-8b88-16af9918168d.jpg" alt="About Image">
+    </div>
+</section>
+
+
+
 </body>
-</html>
+
+
