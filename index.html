@@ -77,7 +77,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 80px; /* Увеличенный размер цифр */
+    font-size: 70px; /* Увеличенный размер цифр */
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: 'Book Antiqua'; /* Шрифт Florisel Script */
@@ -132,13 +132,14 @@
 <!-- Раздел "Видео и отсчет времени" -->
 <section id="video">
     <div class="video-container">
-        <video controls autoplay muted loop>
+        <video id="video" playsinline autoplay muted loop> <!-- Добавлены атрибуты playsinline, muted -->
             <source src="IMG_7473.MP4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="countdown" id="countdown"></div>
     </div>
 </section>
+
 
 <script>
     // Определяем дату окончания отсчета
