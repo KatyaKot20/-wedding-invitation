@@ -69,3 +69,20 @@ footer {
     font-family: "Book Antiqua", serif;
     font-style: italic;
 }
+
+.bottom-left-text,
+.bottom-right-text,
+.ampersand {
+    font-size: 24px; /* Увеличиваем размер шрифта */
+}
+
+.bottom-center-text::after,
+.line {
+    position: absolute;
+    bottom: 10px; /* Под текстом даты */
+    left: 20%; /* Линия начинается с центра */
+    width: 50%;
+    height: 0.5px; /* Высота линии */
+    background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
+    z-index: 1; /* Поместить псевдоэлемент под текстом */
+}
