@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Метатег для адаптивного масштабирования -->
     <title>Fitness App</title>
     <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     body {
-        margin: 0; /* Убираем отступы */
         overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+        font-family: Arial, sans-serif;
     }
 
     .center-image {
@@ -27,60 +34,22 @@
         display: inline-block;
     }
 
-    .bottom-left-text, .bottom-right-text, .bottom-center-text, .ampersand, .date {
-        position: absolute;
-        color: #EADCC2;
-        font-family: "Book Antiqua", sans-serif;
-        font-style: italic;
-        font-size: 20px;
-        margin: 10px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
     .bottom-left-text {
-        bottom: 73px; /* Изменили значение bottom */
-        left: 18px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        color: #EADCC2;
+        font-family: "Book Antiqua", serif;
+        font-style: italic;
     }
 
     .bottom-right-text {
-        bottom: 35px;
-        right: 10px; /* Изменили значение right */
-    }
-
-    .ampersand {
-        bottom: 35px; /* Ниже текста Максим и перед Ангелина */
-        left: 40%; /* Помещаем текст в центре */
-        transform: translateX(-50%); /* Сдвигаем текст влево на половину его ширины, чтобы он был по центру */
-        color: black; /* Черный цвет */
-        font-size: 40px;
-        font-weight: normal; /* Убираем жирность */
-    }
-
-    .date {
-        bottom: 1px; /* Ниже текста Максим и перед Ангелина */
-        right: 50%; /* Помещаем текст в центре */
-        transform: translateX(50%); /* Сдвигаем текст вправо на половину его ширины, чтобы он был по центру */
-    }
-
-    .bottom-center-text::after {
-        content: '';
         position: absolute;
-        bottom: -1px; /* Под текстом даты */
-        left: 0;
-        width: 100%;
-        height: 0.5px; /* Высота линии */
-        background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
-        z-index: -1; /* Поместить псевдоэлемент под текстом */
-    }
-
-    .line {
-        position: absolute;
-        bottom: 10px; /* Под текстом даты */
-        left: 20%; /* Линия начинается с центра */
-        width: 50%;
-        height: 0.5px; /* Высота линии */
-        background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
-        z-index: 1; /* Поместить псевдоэлемент под текстом */
+        right: 10px;
+        bottom: 10px;
+        color: #EADCC2;
+        font-family: "Book Antiqua", serif;
+        font-style: italic;
     }
     </style>
 </head>
@@ -92,8 +61,6 @@
                 <div class="bottom-left-text">Максим</div>
                 <div class="ampersand">&amp;</div> <!-- Знак амперсанда -->
                 <div class="bottom-right-text">Ангелина</div>
-                <div class="line"></div> <!-- Линия -->
-                <div class="date">16.08.2024</div> <!-- Дата -->
             </div>
         </div>
     </section>
