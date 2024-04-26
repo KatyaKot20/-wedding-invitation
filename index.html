@@ -59,6 +59,31 @@
     color: black; /* Черный цвет */
     font-weight: normal; /* Убираем жирность */
 }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px; /* Максимальная ширина контейнера для видео */
+        margin: 0 auto;
+    }
+
+    .video-container video {
+        width: 100%; /* Ширина видео равна ширине контейнера */
+        height: auto;
+    }
+
+    .countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px; /* Увеличенный размер цифр */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Book Antiqua'; /* Шрифт Florisel Script */
+    white-space: nowrap; /* Цифры будут отображаться в одну строку по ширине */
+}
+
     </style>
 </head>
 <body>
@@ -87,6 +112,7 @@
     </div>
 </section>
 
+
 <!-- Раздел "Карта" -->
 <section id="map">
     <a href="https://yandex.ru/maps/org/brigantina/1043433623/?ll=39.817946%2C52.562660&z=11.91"> <!-- Ссылка на карту в Яндексе -->
@@ -102,6 +128,47 @@
         <img src="4f10b2c9-384e-43c0-ac6f-c83d297f4702.jpg" alt="" style="height:50%;">
     </div>
 </section>
+
+<!-- Раздел "Видео и отсчет времени" -->
+<section id="video">
+    <div class="video-container">
+        <video controls autoplay muted loop>
+            <source src="IMG_7473.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="countdown" id="countdown"></div>
+    </div>
+</section>
+
+<script>
+    // Определяем дату окончания отсчета
+    var countdownDate = new Date("August 16, 2024 00:00:00").getTime();
+
+    // Обновляем счетчик каждую секунду
+    var x = setInterval(function() {
+        // Получаем текущую дату и время
+        var now = new Date().getTime();
+
+        // Вычисляем оставшееся время между текущим временем и датой окончания отсчета
+        var distance = countdownDate - now;
+
+        // Рассчитываем дни, часы, минуты и секунды
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Выводим результат в элемент с id="countdown"
+        document.getElementById("countdown").innerHTML = days + "д " + hours + "ч "
+        + minutes + "м " + seconds + "с ";
+
+        // Если отсчет закончился, вывести текст
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Событие уже началось!";
+        }
+    }, 1000);
+</script>
 
 </body>
 </html>
