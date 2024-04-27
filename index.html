@@ -36,32 +36,52 @@
 
     .bottom-left-text {
     position: absolute;
-    left: 80px;
-    bottom: 100px; /* Отступ от нижнего края для текста "Максим" */
+    left: 50px;
+    bottom: 180px; /* Отступ от нижнего края для текста "Максим" */
     color: #EADCC2;
     font-family: "Book Antiqua", serif;
     font-style: italic;
-    font-size: 10px; /* Увеличенный размер шрифта */
+    font-size: 40px; /* Увеличенный размер шрифта */
 }
 
 .bottom-right-text {
     position: absolute;
-    right: 140px;
-    bottom: 20px; /* Отступ от нижнего края для текста "Ангелина" */
+    right: 30px;
+    bottom: 85px; /* Отступ от нижнего края для текста "Ангелина" */
     color: #EADCC2;
     font-family: "Book Antiqua", serif;
     font-style: italic;
-    font-size: 100px; /* Размер шрифта */
+    font-size: 40px; /* Размер шрифта */
 }
 
 .ampersand {
     position: absolute;
-    bottom: 20px; /* Отступ от нижнего края для знака амперсанда */
+    bottom: 120px; /* Отступ от нижнего края для знака амперсанда */
     left: 50%; /* Позиционируем по центру */
     transform: translateX(-50%); /* Сдвигаем влево на половину ширины */
-    font-size: 200px; /* Устанавливаем размер амперсанда */
+    font-size: 60px; /* Устанавливаем размер амперсанда */
 }
 
+.bottom-date {
+    position: absolute;
+    bottom: 20px; /* Отступ от нижнего края */
+    left: 50%; /* Позиционируем по центру */
+    transform: translateX(-50%); /* Сдвигаем влево на половину ширины */
+    font-family: "Book Antiqua", serif;
+    font-style: italic;
+    color: #EADCC2;
+    font-size: 40px; /* Размер шрифта */
+    text-align: center; /* Центрируем текст */
+}
+
+.bottom-date::after {
+    content: "";
+    display: block;
+    width: 100%; /* Ширина линии */
+    height: 2px; /* Высота линии */
+    background: linear-gradient(to right, #E8CC87, #2C3843); /* Градиент */
+    margin: 0 auto; /* Центрируем линию */
+}
 
 
     .video-container {
@@ -96,6 +116,7 @@
                 <div class="bottom-left-text">Максим</div>
                 <div class="ampersand">&amp;</div> <!-- Знак амперсанда -->
                 <div class="bottom-right-text">Ангелина</div>
+                <div class="bottom-date">16.08.2024</div>
             </div>
         </div>
     </section>
