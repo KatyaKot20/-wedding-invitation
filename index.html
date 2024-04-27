@@ -166,6 +166,25 @@
     </div>
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('video');
+
+        // Функция для автоматического воспроизведения видео на мобильных устройствах
+        function playVideo() {
+            video.play().then(function() {
+                // Воспроизведение начато успешно
+            }).catch(function(error) {
+                // Ошибка воспроизведения
+                console.log('Видео не воспроизводится: ', error);
+            });
+        }
+
+        // Попытка автоматического воспроизведения видео после загрузки страницы
+        playVideo();
+    });
+</script>
+
 
 
 <script>
