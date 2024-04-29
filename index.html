@@ -158,13 +158,14 @@
 <!-- Раздел "Видео и отсчет времени" -->
 <section id="video">
     <div class="video-container">
-        <video id="video" autoplay muted loop playsinline controlsList="nodownload" disablePictureInPicture>
+        <video id="video" autoplay muted loop playsinline preload="auto" controlsList="nodownload" disablePictureInPicture>
             <source src="IMG_7473.MP4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="countdown" id="countdown"></div>
     </div>
 </section>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
